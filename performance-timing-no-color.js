@@ -1,5 +1,9 @@
 window.onload = function(){
   setTimeout(function(){
+		if ( document.getElementsByTagName("html")[0].className.indexOf('lte-ie8') > -1 ) {
+			return;
+		}
+		
 		var pageSpeed = [];
 		if ( performance.navigation.redirectCount == 0 ) {
 			pageSpeed[0] = 'Redirections: 0';
